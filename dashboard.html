@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATN</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;700&family=Montserrat&family=Roboto+Serif:opsz,wght@8..144,500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/dashboard.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- Start of header -->
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a  class="navbar-brand" href="#">
+                        <img src="../assets/img/logo_tdtu.png" alt="Logo" height="40" class="d-inline-block align-text-center">
+                        <span class="project-brand">ĐỒ ÁN TỔNG HỢP</span>
+                    </a>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bảng điều khiển</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- End of header -->
+        </div>
+        <!-- Start of body -->
+        <div id="dashboard-content">
+            <h1>BẢNG ĐIỀU KHIỂN</h1>
+            <div class="scada">
+                <div class="control-panel">
+                    <h1>Điều khiển chung</h1>
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-success">Start</button>
+                        <button type="button" class="btn btn-warning">Pause</button>
+                        <button type="button" class="btn btn-danger">Stop</button>
+                    </div>
+                    <h3>Số lượng hàng đã phân loại</h3>
+                    <table class="table table-sm">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Số Lượng</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Đỏ</td>
+                            <td><span id="red-count">10</span></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Xanh</td>
+                            <td><span id="green-count">10</span></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Vàng</td>
+                            <td><span id="yellow-count">10</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+
+                <div class="robot-panel">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../assets/img/Cam_section.png" class="card-img-top" alt="streaming">
+                        <div class="card-body">
+                          <h5 class="card-title">Giám sát Robot</h5>
+                          <p class="card-text">Tọa độ robot: </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">X: <span id="robot-x">50</span></li>
+                          <li class="list-group-item">Y: <span id="robot-y">50</span></li>
+                          <li class="list-group-item">Z: <span id="robot-z">50</span></li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link link-success" id="robot-start">Start Robot</a>
+                          <a href="#" class="card-link link-danger" id="robot-stop">Stop Robot</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="camera-panel">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../assets/img/Robot_section.png" class="card-img-top" alt="streaming">
+                        <div class="card-body">
+                          <h5 class="card-title">Giám sát Camera</h5>
+                          <p class="card-text">Tọa độ vật: </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">X: <span id="cam-x">50</span></li>
+                          <li class="list-group-item">Y: <span id="cam-y">50</span></li>
+                          <li class="list-group-item">Z: <span id="cam-z">50</span></li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link link-success" id="cam-start">Start Stream</a>
+                          <a href="#" class="card-link link-danger" id="cam-stop">Stop Stream</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of main body -->
+
+        
+    </div>
+    
+
+</body>
+</html>
